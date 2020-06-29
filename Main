@@ -1,0 +1,71 @@
+
+$calcular = new Calculos();
+
+echo "/////////////////////////////////////////////////////////////" . PHP_EOL;
+echo "/////////////////////- CALCULADORA -/////////////////////////" . PHP_EOL;
+echo "/////////////////////////////////////////////////////////////" . PHP_EOL;
+
+echo "Digite 1 para somar:" . PHP_EOL;
+echo "Digite 2 para subtrair:" . PHP_EOL;
+echo "Digite 3 para dividir:" . PHP_EOL;
+echo "Digite 4 para multiplicar:" . PHP_EOL;
+echo "Digite 5 para porcentagem:" . PHP_EOL;
+echo "Digite 6 para quadrado:" . PHP_EOL;
+echo "Digite 7 para circulo:" . PHP_EOL;
+echo "Digite 8 para triangulo:" . PHP_EOL;
+
+
+$input = readline(" ") . PHP_EOL;
+switch ($input) {
+    case 1:
+        $numero1 = readline("Digite um numero: ");
+        echo $numero1 . PHP_EOL;
+        $numero2 = readline("Digite outro numero: ");
+        echo $numero2 . PHP_EOL;
+        $soma = $calcular->soma($numero1, $numero2);
+        echo "SOMA: " . $soma;
+        break;
+    case 2:
+        $numero1 = readline("Digite um numero: ");
+        $numero2 = readline("Digite outro numero: ");
+        $subtrai = $calcular->subtrai($numero1, $numero2);
+        echo "SUBTRAÇÃO: " . $subtrai;
+        break;
+    case 3:
+        $numero1 = readline("Digite um numero: ");
+        $numero2 = readline("Digite outro numero: ");
+        $divide = $calcular->divide($numero1, $numero2);
+        echo "DIVISÃO: " . $divide;
+        break;
+    case 4:
+        $numero1 = readline("Digite um numero: ");
+        $numero2 = readline("Digite outro numero: ");
+        $multiplica = $calcular->multiplica($numero1, $numero2);
+        echo "MULTIPLICAÇÃO: " . $multiplica;
+        break;
+
+
+    case 5:
+        $numero1 = readline("Digite um numero: ");
+        $numero2 = readline("Digite outro numero: ");
+        $porcentagem = $calcular->porcent($numero1, $numero2);
+        echo "POR CENTO: " . $porcentagem . "%";
+        break;
+    case 6:
+        $numero1 = readline("Digite a base: ");
+        $numero2 = readline("Digite a altura: ");
+        $area = $calcular->quadrado($numero1, $numero2);
+        echo "AREA: " . $area . "CM²";
+        break;
+    case 7:
+        $numero1 = readline("Digite o raio: ");
+        $perimetro = $calcular->circulo($numero1);
+        echo "PERIMETRO: " . $perimetro . "CM";
+        break;
+    case 8:
+        $numero1 = readline("Digite a base: ");
+        $numero2 = readline("Digite a altura: ");
+        $area_triangulo = $calcular->triangulo($numero1, $numero2);
+        echo "AREA: " . $area_triangulo . "CM²";
+        break;
+}
