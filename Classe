@@ -1,0 +1,46 @@
+class Calculos
+{
+
+
+    function soma($num1, $num2)
+    {
+        return $resultado = $num1 + $num2;
+    }
+
+    function subtrai($num1, $num2)
+    {
+        return $resultado = $num1 - $num2;
+    }
+
+    function divide($num1, $num2)
+    {
+        return $resultado = $num1 / $num2;
+    }
+
+    function multiplica($num1, $num2)
+    {
+        return $resultado = $num1 * $num2;
+    }
+
+    function porcent($num1, $num2)
+    {
+        return ($num1 * $num2) / 100;
+    }
+
+    function quadrado($base, $altura)
+    {
+        return ($base * $altura);
+    }
+
+    function circulo($raio)
+    {
+        return (2 * $raio) * 3.14;
+    }
+
+    function triangulo($base, $altura)
+    {
+        return ($base * $altura) / 2;
+    }
+
+
+}
